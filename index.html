@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>James Akinola | Product Manager Portfolio</title>
+  <meta name="description" content="Product Manager specializing in AI products, user experience, and product support insights." />
+  <meta property="og:title" content="James Akinola | Product Manager Portfolio" />
+  <meta property="og:description" content="Product Manager specializing in AI products, user experience, and product support insights." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="James Akinola | Product Manager Portfolio" />
+  <meta name="twitter:description" content="Product Manager specializing in AI products, user experience, and product support insights." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            body: ['DM Sans', 'sans-serif'],
+          },
+          colors: {
+            ink: '#0f172a',
+            accent: '#6366f1',
+            'accent-light': '#818cf8',
+            'accent-dim': '#eef2ff',
+            surface: '#f8fafc',
+            muted: '#64748b',
+            border: '#e2e8f0',
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-slow': 'pulse 4s ease-in-out infinite',
+            'slide-up': 'slideUp 0.6s ease forwards',
+            'fade-in': 'fadeIn 0.8s ease forwards',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-12px)' },
+            },
+            slideUp: {
+              from: { opacity: '0', transform: 'translateY(24px)' },
+              to: { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              from: { opacity: '0' },
+              to: { opacity: '1' },
+            },
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-surface font-body text-ink antialiased">
+
+  <!-- ═══════════════════════════════════════════
+       NAV
+  ═══════════════════════════════════════════ -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#hero" class="font-display font-700 text-lg tracking-tight text-ink flex items-center gap-2">
+        <span class="w-7 h-7 rounded-lg bg-accent flex items-center justify-center text-white text-xs font-bold">JA</span>
+        <span>Jimmy Akinola</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-muted">
+        <li><a href="#about" class="nav-link hover:text-ink transition-colors">About</a></li>
+        <li><a href="#work" class="nav-link hover:text-ink transition-colors">Work</a></li>
+        <li><a href="#support" class="nav-link hover:text-ink transition-colors">Experience</a></li>
+        <li><a href="#frameworks" class="nav-link hover:text-ink transition-colors">Thinking</a></li>
+        <li><a href="#skills" class="nav-link hover:text-ink transition-colors">Skills</a></li>
+      </ul>
+
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#contact" class="px-4 py-2 text-sm font-medium text-accent border border-accent/30 rounded-lg hover:bg-accent-dim transition-all duration-200">
+          Contact
+        </a>
+        <a href="#work" class="px-4 py-2 text-sm font-medium text-white bg-accent rounded-lg hover:bg-accent-light transition-all duration-200 shadow-sm">
+          View Projects →
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="menu-btn" class="md:hidden p-2 rounded-lg text-muted hover:text-ink transition-colors" aria-label="Toggle menu">
+        <svg id="menu-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur border-t border-border px-6 py-4">
+      <ul class="flex flex-col gap-4 text-sm font-medium text-muted">
+        <li><a href="#about" class="mobile-nav-link hover:text-ink transition-colors block py-1">About</a></li>
+        <li><a href="#work" class="mobile-nav-link hover:text-ink transition-colors block py-1">Work</a></li>
+        <li><a href="#support" class="mobile-nav-link hover:text-ink transition-colors block py-1">Experience</a></li>
+        <li><a href="#frameworks" class="mobile-nav-link hover:text-ink transition-colors block py-1">Thinking</a></li>
+        <li><a href="#skills" class="mobile-nav-link hover:text-ink transition-colors block py-1">Skills</a></li>
+        <li><a href="#contact" class="mobile-nav-link block py-2 px-4 bg-accent text-white rounded-lg text-center mt-2">Get in Touch</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section id="hero" class="relative min-h-screen flex flex-col justify-center overflow-hidden pt-20">
+
+    <!-- Grid Background -->
+    <div class="hero-grid absolute inset-0 pointer-events-none"></div>
+
+    <!-- Gradient Orbs -->
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/8 rounded-full blur-3xl animate-pulse-slow pointer-events-none"></div>
+    <div class="absolute bottom-1/3 right-1/4 w-64 h-64 bg-indigo-300/10 rounded-full blur-2xl animate-float pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Left: Copy -->
+        <div class="reveal-up">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-accent-dim border border-accent/20 rounded-full text-accent text-xs font-medium tracking-wide mb-8">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
+            Product Manager · AI Products · User-Centered Design
+          </div>
+
+          <h1 class="font-display text-5xl lg:text-6xl font-800 text-ink leading-[1.08] tracking-tight mb-6">
+            Turning User<br/>
+            <span class="text-gradient">Problems</span> Into<br/>
+            Real Products
+          </h1>
+
+          <p class="text-lg text-muted leading-relaxed max-w-lg mb-10">
+            I'm Jimmy — a Product Manager who bridges the gap between what users actually struggle with and what gets built. Specializing in AI products, product strategy, and user insight that ships.
+          </p>
+
+          <div class="flex flex-wrap gap-4 mb-12">
+            <a href="#work" class="group inline-flex items-center gap-2 px-6 py-3 bg-accent text-white rounded-xl font-medium text-sm hover:bg-accent-light transition-all duration-200 shadow-lg shadow-accent/25">
+              View Projects
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-ink rounded-xl font-medium text-sm border border-border hover:border-accent/40 hover:bg-accent-dim transition-all duration-200 shadow-sm">
+              Let's Talk
+            </a>
+          </div>
+
+          <!-- Micro Stats -->
+          <div class="flex flex-wrap gap-8 pt-8 border-t border-border/60">
+            <div>
+              <div class="font-display text-2xl font-700 text-ink">AI-First</div>
+              <div class="text-xs text-muted mt-0.5">Product Focus</div>
+            </div>
+            <div>
+              <div class="font-display text-2xl font-700 text-ink">0→1</div>
+              <div class="text-xs text-muted mt-0.5">Builder Mindset</div>
+            </div>
+            <div>
+              <div class="font-display text-2xl font-700 text-ink">User-Led</div>
+              <div class="text-xs text-muted mt-0.5">Decision Making</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Product UI Card (animated) -->
+        <div class="hidden lg:flex items-center justify-center">
+          <div class="relative animate-float">
+
+            <!-- Main Card -->
+            <div class="w-80 bg-white rounded-2xl border border-border shadow-2xl shadow-ink/10 p-6 relative z-10">
+              <!-- Card Header -->
+              <div class="flex items-center justify-between mb-5">
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
+                    <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                    </svg>
+                  </div>
+                  <span class="font-display font-600 text-sm text-ink">Product Dashboard</span>
+                </div>
+                <span class="text-xs text-green-500 font-medium bg-green-50 px-2 py-0.5 rounded-full">● Live</span>
+              </div>
+
+              <!-- Bars -->
+              <div class="space-y-3 mb-5">
+                <div>
+                  <div class="flex justify-between text-xs text-muted mb-1.5">
+                    <span>User Retention</span><span class="text-ink font-medium">87%</span>
+                  </div>
+                  <div class="h-1.5 bg-border rounded-full overflow-hidden">
+                    <div class="h-full bg-accent rounded-full bar-fill" style="--w:87%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs text-muted mb-1.5">
+                    <span>Feature Adoption</span><span class="text-ink font-medium">63%</span>
+                  </div>
+                  <div class="h-1.5 bg-border rounded-full overflow-hidden">
+                    <div class="h-full bg-indigo-300 rounded-full bar-fill" style="--w:63%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs text-muted mb-1.5">
+                    <span>NPS Score</span><span class="text-ink font-medium">72</span>
+                  </div>
+                  <div class="h-1.5 bg-border rounded-full overflow-hidden">
+                    <div class="h-full bg-green-400 rounded-full bar-fill" style="--w:72%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Insight tag -->
+              <div class="bg-accent-dim rounded-lg p-3 border border-accent/10">
+                <p class="text-xs text-accent font-medium leading-relaxed">
+                  💡 Users drop off at onboarding step 3 — simplify form inputs to recover ~18% of signups.
+                </p>
+              </div>
+            </div>
+
+            <!-- Floating chips -->
+            <div class="absolute -top-4 -right-6 bg-white rounded-xl border border-border shadow-lg px-3 py-2 flex items-center gap-2 text-xs font-medium text-ink whitespace-nowrap z-20">
+              <span class="text-sm">🚀</span> Sprint shipped on time
+            </div>
+            <div class="absolute -bottom-4 -left-6 bg-ink rounded-xl px-3 py-2 flex items-center gap-2 text-xs font-medium text-white whitespace-nowrap z-20">
+              <span class="text-sm">🎯</span> 3 user problems solved
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted opacity-60">
+      <span class="text-xs font-medium tracking-widest uppercase">Scroll</span>
+      <div class="w-px h-8 bg-gradient-to-b from-muted to-transparent"></div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════════ -->
+  <section id="about" class="py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="grid lg:grid-cols-2 gap-20 items-center">
+        <!-- Left -->
+        <div class="reveal-up">
+          <div class="text-label mb-4">About</div>
+          <h2 class="font-display text-4xl lg:text-5xl font-700 text-ink leading-tight mb-6">
+            Product thinking starts<br/>with <span class="text-gradient">listening</span>.
+          </h2>
+          <p class="text-muted leading-relaxed mb-5">
+            My path into product management is unconventional — and that's exactly what makes my perspective valuable. I spent years in product support, sitting at the intersection of frustrated users and complex systems. I didn't just log tickets. I listened for patterns.
+          </p>
+          <p class="text-muted leading-relaxed mb-8">
+            That experience built an instinct most PMs have to work hard to develop: the ability to hear what users <em>mean</em>, not just what they say. Now I channel that empathy into building AI-powered products that actually fit how people live and work.
+          </p>
+
+          <!-- Philosophy -->
+          <div class="space-y-3">
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-surface border border-border hover:border-accent/30 transition-colors group">
+              <div class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors mt-0.5">
+                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-medium text-sm text-ink mb-0.5">Customer Empathy First</div>
+                <div class="text-xs text-muted">Every feature starts with a real user struggling with a real problem. Full stop.</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-surface border border-border hover:border-accent/30 transition-colors group">
+              <div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0 group-hover:bg-green-200 transition-colors mt-0.5">
+                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-medium text-sm text-ink mb-0.5">Data-Informed, Not Data-Paralyzed</div>
+                <div class="text-xs text-muted">Numbers inform the direction. Judgment and intuition close the gap when data is thin.</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-surface border border-border hover:border-accent/30 transition-colors group">
+              <div class="w-8 h-8 rounded-lg bg-orange-100 flex items-center justify-center flex-shrink-0 group-hover:bg-orange-200 transition-colors mt-0.5">
+                <svg class="w-4 h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-medium text-sm text-ink mb-0.5">Ship, Learn, Iterate</div>
+                <div class="text-xs text-muted">Perfect is the enemy of shipped. I bias toward getting real feedback from real users fast.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Tags cloud -->
+        <div class="reveal-up reveal-delay">
+          <div class="relative">
+            <!-- Big quote -->
+            <blockquote class="font-display text-2xl font-600 text-ink leading-snug mb-8 p-8 bg-surface rounded-2xl border border-border relative">
+              <div class="absolute -top-3 left-8 w-6 h-6 bg-accent rounded-full flex items-center justify-center">
+                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+              </div>
+              "I don't build features. I solve problems that users can't clearly articulate — and turn them into products they didn't know they needed."
+            </blockquote>
+
+            <!-- Theme tags -->
+            <div class="flex flex-wrap gap-2">
+              <span class="tag-pill bg-accent/10 text-accent border-accent/20">Customer Empathy</span>
+              <span class="tag-pill bg-green-50 text-green-700 border-green-200">Problem-First Thinking</span>
+              <span class="tag-pill bg-orange-50 text-orange-700 border-orange-200">Data-Informed</span>
+              <span class="tag-pill bg-purple-50 text-purple-700 border-purple-200">Ship Fast</span>
+              <span class="tag-pill bg-blue-50 text-blue-700 border-blue-200">Systems Thinking</span>
+              <span class="tag-pill bg-pink-50 text-pink-700 border-pink-200">AI Products</span>
+              <span class="tag-pill bg-yellow-50 text-yellow-700 border-yellow-200">User Research</span>
+              <span class="tag-pill bg-teal-50 text-teal-700 border-teal-200">Engineering Collaboration</span>
+              <span class="tag-pill bg-slate-100 text-slate-600 border-slate-200">Roadmapping</span>
+              <span class="tag-pill bg-red-50 text-red-600 border-red-200">Feedback Loops</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       FEATURED WORK
+  ═══════════════════════════════════════════ -->
+  <section id="work" class="py-28 bg-surface">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-16 reveal-up">
+        <div class="text-label mb-4">Case Studies</div>
+        <h2 class="font-display text-4xl lg:text-5xl font-700 text-ink mb-4">Featured Products</h2>
+        <p class="text-muted max-w-xl mx-auto">Real product thinking applied to real problems. Each case study walks through the full problem-to-solution arc.</p>
+      </div>
+
+      <!-- Case Study 1: PivotPath -->
+      <div class="case-card reveal-up mb-8 bg-white rounded-3xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+        <div class="grid lg:grid-cols-2">
+          <!-- Content -->
+          <div class="p-10 lg:p-12">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-accent to-indigo-400 flex items-center justify-center shadow-lg shadow-accent/30">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                </svg>
+              </div>
+              <div>
+                <span class="text-xs text-accent font-semibold tracking-wide uppercase">AI Product</span>
+                <h3 class="font-display text-xl font-700 text-ink">PivotPath</h3>
+              </div>
+            </div>
+
+            <p class="text-muted text-sm leading-relaxed mb-8">
+              AI-powered career transition tool that helps mid-career professionals navigate their pivot to remote roles — from resume to offer letter, in 7 days.
+            </p>
+
+            <!-- Problem / Solution / Impact row -->
+            <div class="space-y-5 mb-8">
+              <div class="case-block border-l-2 border-red-400 pl-4">
+                <div class="text-xs font-semibold text-red-500 uppercase tracking-wide mb-1">Problem</div>
+                <p class="text-sm text-ink">Mid-career professionals have deep expertise but can't translate it into remote-ready opportunities. Generic job boards fail them — no tailored strategy, no clarity on positioning.</p>
+              </div>
+              <div class="case-block border-l-2 border-accent pl-4">
+                <div class="text-xs font-semibold text-accent uppercase tracking-wide mb-1">Solution</div>
+                <p class="text-sm text-ink">An AI engine that ingests career history, identifies transferable skills, generates a pivot narrative, and outputs a 7-day personalized job search execution plan with AI-tailored resume and outreach templates.</p>
+              </div>
+              <div class="case-block border-l-2 border-green-400 pl-4">
+                <div class="text-xs font-semibold text-green-600 uppercase tracking-wide mb-1">Product Thinking</div>
+                <p class="text-sm text-ink">The 7-day frame was intentional — it creates urgency without overwhelm. I validated that users abandon open-ended tools; a time-boxed plan with daily tasks dramatically improves completion rates.</p>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div class="grid grid-cols-2 gap-2 mb-8">
+              <div class="feature-chip">🤖 AI Resume Generation</div>
+              <div class="feature-chip">🗺️ Personalized Strategy</div>
+              <div class="feature-chip">📅 7-Day Execution Plan</div>
+              <div class="feature-chip">🎯 Remote Role Targeting</div>
+            </div>
+
+            <!-- Impact -->
+            <div class="p-4 bg-green-50 border border-green-100 rounded-xl">
+              <div class="text-xs font-semibold text-green-600 uppercase tracking-wide mb-2">Impact</div>
+              <p class="text-sm text-green-800">Concept validated with 40+ mid-career professionals. 78% said the structured 7-day plan reduced their anxiety about career transitions. Key insight: users don't need more job listings — they need a strategy.</p>
+            </div>
+          </div>
+
+          <!-- Visual Panel -->
+          <div class="bg-gradient-to-br from-accent/5 to-indigo-100/30 p-10 flex flex-col justify-center gap-4">
+
+            <!-- Step flow -->
+            <div class="text-xs font-semibold text-muted uppercase tracking-wide mb-2">User Journey</div>
+            <div class="space-y-3">
+              <div class="step-node bg-white">
+                <div class="step-dot bg-accent"></div>
+                <div>
+                  <div class="text-sm font-medium text-ink">Input Career History</div>
+                  <div class="text-xs text-muted">AI analyzes transferable skills</div>
+                </div>
+              </div>
+              <div class="step-connector ml-5"></div>
+              <div class="step-node bg-white">
+                <div class="step-dot bg-indigo-400"></div>
+                <div>
+                  <div class="text-sm font-medium text-ink">AI Generates Pivot Narrative</div>
+                  <div class="text-xs text-muted">Tailored positioning for target roles</div>
+                </div>
+              </div>
+              <div class="step-connector ml-5"></div>
+              <div class="step-node bg-white">
+                <div class="step-dot bg-purple-400"></div>
+                <div>
+                  <div class="text-sm font-medium text-ink">Resume + Outreach Kit</div>
+                  <div class="text-xs text-muted">AI-written, human-reviewed</div>
+                </div>
+              </div>
+              <div class="step-connector ml-5"></div>
+              <div class="step-node bg-white">
+                <div class="step-dot bg-green-500"></div>
+                <div>
+                  <div class="text-sm font-medium text-ink">7-Day Execution Plan</div>
+                  <div class="text-xs text-muted">Daily tasks with accountability check-ins</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Metrics -->
+            <div class="grid grid-cols-2 gap-3 mt-4">
+              <div class="bg-white rounded-xl p-4 text-center border border-border shadow-sm">
+                <div class="font-display text-2xl font-700 text-accent">78%</div>
+                <div class="text-xs text-muted mt-1">Reduced anxiety score</div>
+              </div>
+              <div class="bg-white rounded-xl p-4 text-center border border-border shadow-sm">
+                <div class="font-display text-2xl font-700 text-ink">7</div>
+                <div class="text-xs text-muted mt-1">Days to first application</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study 2: Reading Platform -->
+      <div class="case-card reveal-up bg-white rounded-3xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+        <div class="grid lg:grid-cols-2">
+
+          <!-- Visual Panel first on this one -->
+          <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-10 flex flex-col justify-center gap-4 order-2 lg:order-1">
+
+            <!-- Engagement loop diagram -->
+            <div class="text-xs font-semibold text-muted uppercase tracking-wide mb-2">Engagement Loop</div>
+
+            <div class="relative flex items-center justify-center h-48">
+              <!-- Center label -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center">
+                  <div class="font-display text-lg font-700 text-orange-600">The Loop</div>
+                  <div class="text-xs text-muted">that keeps users reading</div>
+                </div>
+              </div>
+
+              <!-- SVG ring -->
+              <svg viewBox="0 0 200 200" class="w-full h-full opacity-20">
+                <circle cx="100" cy="100" r="80" fill="none" stroke="#f97316" stroke-width="1.5" stroke-dasharray="8 4"/>
+              </svg>
+
+              <!-- Labels around the ring -->
+              <div class="absolute top-1 left-1/2 -translate-x-1/2 text-xs font-medium text-orange-600 bg-orange-50 border border-orange-200 rounded-full px-2 py-0.5">Start Book</div>
+              <div class="absolute right-0 top-1/2 -translate-y-1/2 text-xs font-medium text-amber-600 bg-amber-50 border border-amber-200 rounded-full px-2 py-0.5">Share Insight</div>
+              <div class="absolute bottom-1 left-1/2 -translate-x-1/2 text-xs font-medium text-yellow-600 bg-yellow-50 border border-yellow-200 rounded-full px-2 py-0.5">Get Reactions</div>
+              <div class="absolute left-0 top-1/2 -translate-y-1/2 text-xs font-medium text-red-500 bg-red-50 border border-red-200 rounded-full px-2 py-0.5">Stay Hooked</div>
+            </div>
+
+            <!-- Features -->
+            <div class="space-y-2">
+              <div class="flex items-center gap-3 bg-white rounded-xl p-3 border border-orange-100 shadow-sm">
+                <span class="text-lg">💬</span>
+                <div>
+                  <div class="text-sm font-medium text-ink">Live Reading Chatrooms</div>
+                  <div class="text-xs text-muted">Chapter-by-chapter social accountability</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 bg-white rounded-xl p-3 border border-orange-100 shadow-sm">
+                <span class="text-lg">✨</span>
+                <div>
+                  <div class="text-sm font-medium text-ink">Insight Sharing</div>
+                  <div class="text-xs text-muted">Share quotes and reactions with your group</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 bg-white rounded-xl p-3 border border-orange-100 shadow-sm">
+                <span class="text-lg">🔥</span>
+                <div>
+                  <div class="text-sm font-medium text-ink">Streak Motivation</div>
+                  <div class="text-xs text-muted">Behavioral nudges to build the reading habit</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-10 lg:p-12 order-1 lg:order-2">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-orange-400 to-amber-400 flex items-center justify-center shadow-lg shadow-orange-300/40">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                </svg>
+              </div>
+              <div>
+                <span class="text-xs text-orange-500 font-semibold tracking-wide uppercase">Behavioral Design</span>
+                <h3 class="font-display text-xl font-700 text-ink">Reading Motivation Platform</h3>
+              </div>
+            </div>
+
+            <p class="text-muted text-sm leading-relaxed mb-8">
+              A social platform that uses community accountability, micro-rewards, and behavioral mechanics to help people actually finish the books they start.
+            </p>
+
+            <div class="space-y-5 mb-8">
+              <div class="case-block border-l-2 border-red-400 pl-4">
+                <div class="text-xs font-semibold text-red-500 uppercase tracking-wide mb-1">Problem</div>
+                <p class="text-sm text-ink">83% of people who buy books don't finish them. The problem isn't attention span — it's isolation and lack of progress momentum. Reading is a solo act with no external accountability.</p>
+              </div>
+              <div class="case-block border-l-2 border-orange-400 pl-4">
+                <div class="text-xs font-semibold text-orange-500 uppercase tracking-wide mb-1">Solution</div>
+                <p class="text-sm text-ink">Turn reading into a social experience. Chapter-synced chatrooms, shared highlights, and streak mechanics create the social fabric that drives completion — borrowed from gaming and fitness apps.</p>
+              </div>
+              <div class="case-block border-l-2 border-green-400 pl-4">
+                <div class="text-xs font-semibold text-green-600 uppercase tracking-wide mb-1">Product Thinking</div>
+                <p class="text-sm text-ink">Studied Duolingo's streak mechanics, Goodreads' social proof, and Discord's community dynamics. Synthesized these into a tight engagement loop where sharing an insight creates social capital — which is the real motivation to keep reading.</p>
+              </div>
+            </div>
+
+            <div class="p-4 bg-orange-50 border border-orange-100 rounded-xl">
+              <div class="text-xs font-semibold text-orange-600 uppercase tracking-wide mb-2">Key Insight</div>
+              <p class="text-sm text-orange-800">Users don't need a better reading app. They need a social reason to pick up the book. Community accountability has a 3× stronger correlation with book completion than any gamification mechanic.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       PRODUCT SUPPORT EXPERIENCE
+  ═══════════════════════════════════════════ -->
+  <section id="support" class="py-28 bg-ink text-white">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-16 reveal-up">
+        <div class="text-label-dark mb-4">Origin Story</div>
+        <h2 class="font-display text-4xl lg:text-5xl font-700 text-white mb-4">Support Is a<br/><span class="text-gradient-warm">Superpower</span></h2>
+        <p class="text-slate-400 max-w-xl mx-auto">Most PMs learn users through research reports. I learned them through hundreds of real conversations — and I know the difference.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-16">
+
+        <div class="support-card reveal-up">
+          <div class="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-accent-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-600 text-white mb-3">Identifying Patterns</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">When 40 users report the same "bug" in different ways, that's not a bug — that's a product decision that needs revisiting. I built the skill of reading signals in noise.</p>
+          <div class="text-xs text-accent-light font-medium">→ Turned 3 recurring complaints into 1 product improvement that reduced support volume by 34%</div>
+        </div>
+
+        <div class="support-card reveal-up reveal-delay">
+          <div class="w-10 h-10 rounded-xl bg-green-500/20 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-600 text-white mb-3">Insights → Improvements</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">I built a personal pipeline: ticket clusters → pattern documentation → product team brief → prioritization case. Support insights became a stream of product intelligence.</p>
+          <div class="text-xs text-green-400 font-medium">→ Proposed and shipped 2 features directly sourced from support trend analysis</div>
+        </div>
+
+        <div class="support-card reveal-up reveal-delay-2">
+          <div class="w-10 h-10 rounded-xl bg-orange-500/20 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-600 text-white mb-3">Bridging Users & Eng</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">Engineers build what they're given context to build. I learned to translate user pain into technical clarity — writing specs that gave engineers the "why" behind every decision.</p>
+          <div class="text-xs text-orange-400 font-medium">→ Reduced back-and-forth clarification cycles by writing context-rich PRDs that engineering could action directly</div>
+        </div>
+
+      </div>
+
+      <!-- The transition -->
+      <div class="reveal-up bg-white/5 border border-white/10 rounded-2xl p-8 lg:p-10 backdrop-blur">
+        <div class="grid lg:grid-cols-2 gap-8 items-center">
+          <div>
+            <div class="text-xs text-accent-light font-semibold uppercase tracking-wide mb-3">The Transition</div>
+            <h3 class="font-display text-2xl font-700 text-white mb-4">From Support Queue to Product Roadmap</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Product support taught me that the most valuable product research isn't in a user interview — it's in the moment when a user is so frustrated they write a ticket at 11pm. That raw, unfiltered frustration is the signal. I built my PM practice around capturing and acting on exactly that.</p>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white/5 rounded-xl p-5 text-center border border-white/10">
+              <div class="font-display text-3xl font-700 text-white mb-1">100s</div>
+              <div class="text-xs text-slate-400">User conversations processed</div>
+            </div>
+            <div class="bg-white/5 rounded-xl p-5 text-center border border-white/10">
+              <div class="font-display text-3xl font-700 text-accent-light mb-1">∞</div>
+              <div class="text-xs text-slate-400">Pattern recognition loops built</div>
+            </div>
+            <div class="bg-white/5 rounded-xl p-5 text-center border border-white/10">
+              <div class="font-display text-3xl font-700 text-green-400 mb-1">2×</div>
+              <div class="text-xs text-slate-400">Faster at writing specs vs avg PM</div>
+            </div>
+            <div class="bg-white/5 rounded-xl p-5 text-center border border-white/10">
+              <div class="font-display text-3xl font-700 text-orange-400 mb-1">Real</div>
+              <div class="text-xs text-slate-400">User empathy — not simulated</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       PRODUCT THINKING FRAMEWORKS
+  ═══════════════════════════════════════════ -->
+  <section id="frameworks" class="py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-16 reveal-up">
+        <div class="text-label mb-4">Mental Models</div>
+        <h2 class="font-display text-4xl lg:text-5xl font-700 text-ink mb-4">How I Think About<br/>Product</h2>
+        <p class="text-muted max-w-xl mx-auto">Frameworks aren't rigid formulas — they're thinking accelerators. Here's how I approach the hardest parts of the PM job.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <!-- Framework 1 -->
+        <div class="framework-card reveal-up p-8 rounded-2xl border border-border hover:border-accent/40 transition-all duration-300 hover:shadow-lg group">
+          <div class="flex items-start gap-4 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-display text-lg font-700 text-ink mb-1">Problem → Insight → Solution</h3>
+              <span class="text-xs text-accent font-medium bg-accent-dim px-2 py-0.5 rounded-full">Core Framework</span>
+            </div>
+          </div>
+          <div class="flex items-stretch gap-3">
+            <div class="flex-1 bg-red-50 rounded-xl p-4 text-center">
+              <div class="text-xl mb-1">🔴</div>
+              <div class="text-xs font-semibold text-red-600 mb-1">Problem</div>
+              <div class="text-xs text-muted">Surface the real pain, not the symptom</div>
+            </div>
+            <div class="flex items-center text-muted text-sm">→</div>
+            <div class="flex-1 bg-yellow-50 rounded-xl p-4 text-center">
+              <div class="text-xl mb-1">💡</div>
+              <div class="text-xs font-semibold text-yellow-600 mb-1">Insight</div>
+              <div class="text-xs text-muted">Find the pattern that explains the pain</div>
+            </div>
+            <div class="flex items-center text-muted text-sm">→</div>
+            <div class="flex-1 bg-green-50 rounded-xl p-4 text-center">
+              <div class="text-xl mb-1">✅</div>
+              <div class="text-xs font-semibold text-green-600 mb-1">Solution</div>
+              <div class="text-xs text-muted">Build the simplest thing that works</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Framework 2 -->
+        <div class="framework-card reveal-up reveal-delay p-8 rounded-2xl border border-border hover:border-accent/40 transition-all duration-300 hover:shadow-lg group">
+          <div class="flex items-start gap-4 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-purple-50 flex items-center justify-center flex-shrink-0 group-hover:bg-purple-100 transition-colors">
+              <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-display text-lg font-700 text-ink mb-1">Customer Journey Mapping</h3>
+              <span class="text-xs text-purple-600 font-medium bg-purple-50 px-2 py-0.5 rounded-full border border-purple-200">User Research</span>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <div class="flex items-center gap-3 bg-surface rounded-lg px-4 py-2.5">
+              <div class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center text-xs font-bold text-purple-600">1</div>
+              <span class="text-sm text-ink">Trigger — What made them seek a solution?</span>
+            </div>
+            <div class="flex items-center gap-3 bg-surface rounded-lg px-4 py-2.5">
+              <div class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center text-xs font-bold text-purple-600">2</div>
+              <span class="text-sm text-ink">Awareness — How did they find the product?</span>
+            </div>
+            <div class="flex items-center gap-3 bg-surface rounded-lg px-4 py-2.5">
+              <div class="w-6 h-6 rounded-full bg-purple-200 flex items-center justify-center text-xs font-bold text-purple-700">3</div>
+              <span class="text-sm text-ink">Friction — Where do they want to quit?</span>
+            </div>
+            <div class="flex items-center gap-3 bg-surface rounded-lg px-4 py-2.5">
+              <div class="w-6 h-6 rounded-full bg-purple-300 flex items-center justify-center text-xs font-bold text-purple-800">4</div>
+              <span class="text-sm text-ink">Value — When do they go "aha!"?</span>
+            </div>
+            <div class="flex items-center gap-3 bg-surface rounded-lg px-4 py-2.5">
+              <div class="w-6 h-6 rounded-full bg-purple-400 flex items-center justify-center text-xs font-bold text-white">5</div>
+              <span class="text-sm text-ink">Loyalty — What makes them stay + tell others?</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Framework 3 -->
+        <div class="framework-card reveal-up p-8 rounded-2xl border border-border hover:border-accent/40 transition-all duration-300 hover:shadow-lg group">
+          <div class="flex items-start gap-4 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center flex-shrink-0 group-hover:bg-green-100 transition-colors">
+              <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-display text-lg font-700 text-ink mb-1">Feature Prioritization Matrix</h3>
+              <span class="text-xs text-green-600 font-medium bg-green-50 px-2 py-0.5 rounded-full border border-green-200">Roadmapping</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div class="p-4 bg-green-100 rounded-xl border border-green-200">
+              <div class="text-xs font-bold text-green-700 mb-1">High Impact / Low Effort</div>
+              <div class="text-xs text-green-600">🚀 Do immediately — these are your quick wins</div>
+            </div>
+            <div class="p-4 bg-blue-50 rounded-xl border border-blue-200">
+              <div class="text-xs font-bold text-blue-700 mb-1">High Impact / High Effort</div>
+              <div class="text-xs text-blue-600">📅 Plan carefully — strategic bets worth investing in</div>
+            </div>
+            <div class="p-4 bg-yellow-50 rounded-xl border border-yellow-200">
+              <div class="text-xs font-bold text-yellow-700 mb-1">Low Impact / Low Effort</div>
+              <div class="text-xs text-yellow-600">🤔 Fill gaps when capacity allows</div>
+            </div>
+            <div class="p-4 bg-red-50 rounded-xl border border-red-200">
+              <div class="text-xs font-bold text-red-600 mb-1">Low Impact / High Effort</div>
+              <div class="text-xs text-red-500">❌ Ruthlessly cut or defer — this is trap territory</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Framework 4 -->
+        <div class="framework-card reveal-up reveal-delay p-8 rounded-2xl border border-border hover:border-accent/40 transition-all duration-300 hover:shadow-lg group">
+          <div class="flex items-start gap-4 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center flex-shrink-0 group-hover:bg-orange-100 transition-colors">
+              <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-display text-lg font-700 text-ink mb-1">Feedback Loop Design</h3>
+              <span class="text-xs text-orange-500 font-medium bg-orange-50 px-2 py-0.5 rounded-full border border-orange-200">Systems Thinking</span>
+            </div>
+          </div>
+          <p class="text-sm text-muted mb-5 leading-relaxed">A product that doesn't learn from its users is a product that will die. I design feedback mechanisms into every product layer — not as an afterthought.</p>
+          <div class="space-y-2">
+            <div class="flex items-center gap-3">
+              <div class="w-2 h-2 rounded-full bg-orange-400"></div>
+              <span class="text-sm text-ink">Quantitative signals: retention, activation, NPS</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-2 h-2 rounded-full bg-orange-300"></div>
+              <span class="text-sm text-ink">Qualitative signals: session recordings, support tickets</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-2 h-2 rounded-full bg-orange-200"></div>
+              <span class="text-sm text-ink">Behavioral signals: feature usage paths, drop-off points</span>
+            </div>
+            <div class="mt-3 pt-3 border-t border-border flex items-center gap-2 text-sm font-medium text-orange-500">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+              </svg>
+              All three converge in the weekly sprint retro
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SKILLS
+  ═══════════════════════════════════════════ -->
+  <section id="skills" class="py-28 bg-surface">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-16 reveal-up">
+        <div class="text-label mb-4">Capabilities</div>
+        <h2 class="font-display text-4xl lg:text-5xl font-700 text-ink mb-4">Skills & Toolkit</h2>
+        <p class="text-muted max-w-xl mx-auto">The full stack of a modern PM — from strategy to execution, research to roadmapping, user empathy to engineering collaboration.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Product Skills -->
+        <div class="bg-white rounded-2xl border border-border p-8 reveal-up hover:shadow-lg transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-700 text-ink mb-5">Product</h3>
+          <div class="space-y-3">
+            <div class="skill-row">
+              <span class="skill-name">Product Strategy</span>
+              <div class="skill-bar"><div class="skill-fill bg-accent" style="--pct:92%"></div></div>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">Roadmapping</span>
+              <div class="skill-bar"><div class="skill-fill bg-accent" style="--pct:88%"></div></div>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">User Research</span>
+              <div class="skill-bar"><div class="skill-fill bg-accent" style="--pct:90%"></div></div>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">Experimentation</span>
+              <div class="skill-bar"><div class="skill-fill bg-accent" style="--pct:78%"></div></div>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">PRD Writing</span>
+              <div class="skill-bar"><div class="skill-fill bg-accent" style="--pct:94%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="bg-white rounded-2xl border border-border p-8 reveal-up reveal-delay hover:shadow-lg transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-700 text-ink mb-5">Technical</h3>
+          <div class="space-y-3">
+            <div class="skill-row">
+              <span class="skill-name">API Understanding</span>
+              <div class="skill-bar"><div class="skill-fill bg-blue-500" style="--pct:80%"></div></div>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">AI / LLM Tools</span>
+              <div class="skill-bar"><div class="skill-fill bg-blue-500" style="--pct:88%"></div></div>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">Analytics (GA, Mixpanel)</span>
+              <div class="skill-bar"><div class="skill-fill bg-blue-500" style="--pct:82%"></div></div>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">Product Documentation</span>
+              <div class="skill-bar"><div class="skill-fill bg-blue-500" style="--pct:93%"></div></div>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">SQL / Data Queries</span>
+              <div class="skill-bar"><div class="skill-fill bg-blue-500" style="--pct:65%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Collaboration Skills -->
+        <div class="bg-white rounded-2xl border border-border p-8 reveal-up reveal-delay-2 hover:shadow-lg transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-700 text-ink mb-5">Collaboration</h3>
+          <div class="space-y-3">
+            <div class="skill-row">
+              <span class="skill-name">Stakeholder Comms</span>
+              <div class="skill-bar"><div class="skill-fill bg-green-500" style="--pct:91%"></div></div>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">Engineering Alignment</span>
+              <div class="skill-bar"><div class="skill-fill bg-green-500" style="--pct:86%"></div></div>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">Support Feedback Loops</span>
+              <div class="skill-bar"><div class="skill-fill bg-green-500" style="--pct:95%"></div></div>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">Cross-Functional Leading</span>
+              <div class="skill-bar"><div class="skill-fill bg-green-500" style="--pct:82%"></div></div>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">Design Collaboration</span>
+              <div class="skill-bar"><div class="skill-fill bg-green-500" style="--pct:79%"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tools row -->
+      <div class="mt-8 bg-white rounded-2xl border border-border p-8 reveal-up">
+        <div class="text-sm font-semibold text-muted uppercase tracking-wide mb-5">Tools I Work With Daily</div>
+        <div class="flex flex-wrap gap-3">
+          <span class="tool-chip">Notion</span>
+          <span class="tool-chip">Figma</span>
+          <span class="tool-chip">Linear</span>
+          <span class="tool-chip">Jira</span>
+          <span class="tool-chip">Mixpanel</span>
+          <span class="tool-chip">Amplitude</span>
+          <span class="tool-chip">Slack</span>
+          <span class="tool-chip">Miro</span>
+          <span class="tool-chip">ChatGPT / Claude</span>
+          <span class="tool-chip">Google Analytics</span>
+          <span class="tool-chip">Loom</span>
+          <span class="tool-chip">Confluence</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════ -->
+  <section id="contact" class="py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+
+      <div class="reveal-up">
+        <div class="text-label mb-4">Get In Touch</div>
+        <h2 class="font-display text-4xl lg:text-6xl font-800 text-ink leading-tight mb-6">
+          Let's build products<br/><span class="text-gradient">users actually love.</span>
+        </h2>
+        <p class="text-muted text-lg max-w-lg mx-auto mb-12">
+          Whether you're looking for a PM who brings user obsession, AI product thinking, and shipping momentum — I'd love to connect.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4 mb-16">
+          <a href="mailto:jimmy@example.com" class="group inline-flex items-center gap-3 px-8 py-4 bg-accent text-white rounded-xl font-medium hover:bg-accent-light transition-all duration-200 shadow-lg shadow-accent/30">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            Send me an email
+          </a>
+          <a href="https://linkedin.com/in/jimmy-akinola" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-3 px-8 py-4 bg-white text-ink rounded-xl font-medium border border-border hover:border-accent/40 hover:bg-accent-dim transition-all duration-200 shadow-sm">
+            <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            Connect on LinkedIn
+          </a>
+        </div>
+
+        <!-- Availability badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-green-50 border border-green-200 rounded-full text-green-700 text-sm font-medium">
+          <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+          Open to new opportunities — let's talk
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="bg-ink text-slate-400 py-10 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="w-6 h-6 rounded-md bg-accent flex items-center justify-center text-white text-xs font-bold">JA</span>
+        <span class="text-sm font-medium text-slate-300">James Akinola</span>
+      </div>
+      <p class="text-sm text-center">Designed & built with product thinking in mind. © 2025</p>
+      <div class="flex items-center gap-4 text-sm">
+        <a href="mailto:jimmy@example.com" class="hover:text-white transition-colors">Email</a>
+        <a href="https://linkedin.com/in/jimmy-akinola" class="hover:text-white transition-colors" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
